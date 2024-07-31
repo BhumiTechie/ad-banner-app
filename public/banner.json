@@ -1,0 +1,27 @@
+[
+    {
+      "id": 1,
+      "title": "Banner 1",
+      "description": "This is the first banner",
+      "cta": "Click Here",
+      "image": "/path-to-your-image.jpg",
+      "background": "/path-to-your-background.png"
+    },
+    {
+      "id": 2,
+      "title": "Banner 2",
+      "description": "This is the second banner",
+      "cta": "Shop Now",
+      "image": "/path-to-your-image.jpg",
+      "background": "/path-to-your-background.png"
+    },
+    {
+      "id": 3,
+      "title": "Banner 3",
+      "description": "This is the third banner",
+      "cta": "Learn More",
+      "image": "/path-to-your-image.jpg",
+      "background": "/path-to-your-background.png"
+    }
+  ]
+  
