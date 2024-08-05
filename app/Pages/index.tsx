@@ -1,10 +1,10 @@
-// pages/index.js or pages/index.tsx
+
 import React from 'react';
 
 const Home = () => {
   return (
     <div>
-      <h1>Welcome to my app!</h1>
+      <h1>Welcome to my AdBanner!</h1>
     </div>
   );
 };
