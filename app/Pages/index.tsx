@@ -1,5 +1,13 @@
-const Home: React.FC = () => {
-  return <div>Hello World</div>;
+// pages/index.js or pages/index.tsx
+import React from 'react';
+
+const Home = () => {
+  return (
+    <div>
+      <h1>Welcome to my app!</h1>
+    </div>
+  );
 };
 
 export default Home;
+

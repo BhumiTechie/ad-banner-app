@@ -1,23 +1,40 @@
-
 import React, { useState } from 'react';
 
 interface EditProps {
-  title: string;
-  description: string;
-  cta: string;
-  imageUrl: string;
-  onSave: (title: string, description: string, cta: string, imageUrl: string) => void;
+  currentBanner: {
+    id: number;
+    title: string;
+    description: string;
+    cta: string;
+    image: string;
+    background: string;
+  };
+  onSave: (updatedBanner: {
+    id: number;
+    title: string;
+    description: string;
+    cta: string;
+    image: string;
+    background: string;
+  }) => void;
   onClose: () => void;
 }
 
-const Edit: React.FC<EditProps> = ({ title, description, cta, imageUrl, onSave, onClose }) => {
-  const [newTitle, setNewTitle] = useState(title);
-  const [newDescription, setNewDescription] = useState(description);
-  const [newCta, setNewCta] = useState(cta);
-  const [newImageUrl, setNewImageUrl] = useState(imageUrl);
+const Edit: React.FC<EditProps> = ({ currentBanner, onSave, onClose }) => {
+  const [newTitle, setNewTitle] = useState(currentBanner.title);
+  const [newDescription, setNewDescription] = useState(currentBanner.description);
+  const [newCta, setNewCta] = useState(currentBanner.cta);
+  const [newImageUrl, setNewImageUrl] = useState(currentBanner.image);
 
   const handleSave = () => {
-    onSave(newTitle, newDescription, newCta, newImageUrl);
+    onSave({
+      id: currentBanner.id,
+      title: newTitle,
+      description: newDescription,
+      cta: newCta,
+      image: newImageUrl,
+      background: currentBanner.background
+    });
     onClose();
   };
 
